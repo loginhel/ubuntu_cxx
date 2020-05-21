@@ -90,6 +90,15 @@ RUN firstDeps="libasio-dev\
 			 libhiredis-dev\
 			 libmemcached-dev\
 			 libczmq-dev\
+			 libdouble-conversion-dev \
+			 libgoogle-glog-dev \
+			 libgflags-dev \
+			 libiberty-dev \
+			 liblzma-dev \
+			 zlib1g-dev \
+			 binutils-dev \
+			 libjemalloc-dev \
+			 libunwind-dev \
 			 bison\
 			 curl\
 			 sudo\
