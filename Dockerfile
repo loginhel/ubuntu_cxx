@@ -58,10 +58,10 @@ RUN mkdir /run/sshd
 RUN firstDeps="libasio-dev\
 			 libevent-dev\
 			 libspdlog-dev\
-			 libpoco-dev\
 			 libpq-dev\
 			 libpqxx-dev\
 			 libmysqlclient-dev\
+			 libpoco-dev\
 			 libsqlite3-dev\
 			 libjsoncpp-dev\
 			 libssl-dev\
@@ -99,13 +99,25 @@ RUN firstDeps="libasio-dev\
 			 binutils-dev \
 			 libjemalloc-dev \
 			 libunwind-dev \
+			 libzookeeper-mt-dev \
+			 libtinyxml2-dev \
+			 librocksdb-dev \
+			 rocksdb-tools \
 			 bison\
 			 curl\
 			 sudo\
 			 lsof\
 			 nginx\
 			 unzip\
+			 lrzsz\
 			 zip\
 			 lksctp-tools\
 			 numactl" && \
     apt-get install -f -y ${firstDeps}
+
+WORKDIR /tmp
+RUN git clone https://github.com/vipshop/hiredis-vip.git \
+	&& cd hiredis-vip \
+	&& make && make install \
+	&& rm -rf /tmp/hiredis-vip
+
