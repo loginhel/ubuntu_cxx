@@ -101,6 +101,7 @@ RUN firstDeps="libasio-dev\
 			 libunwind-dev \
 			 libzookeeper-mt-dev \
 			 libtinyxml2-dev \
+			 libtbb-dev \
 			 librocksdb-dev \
 			 rocksdb-tools \
 			 bison\
@@ -121,3 +122,4 @@ RUN git clone https://github.com/vipshop/hiredis-vip.git \
 	&& make && make install \
 	&& rm -rf /tmp/hiredis-vip
 
+# 安装rust环境：curl -sf -L https://static.rust-lang.org/rustup.sh | sh
