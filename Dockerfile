@@ -103,7 +103,26 @@ RUN firstDeps="libasio-dev\
 			 libtinyxml2-dev \
 			 libtbb-dev \
 			 librocksdb-dev \
+			 libopenblas-dev \
+			 liblapack-dev \
+			 libjson-c-dev \
+			 libcurlpp-dev \
+			 libjwt-dev \
+			 libbz2-dev \
+			 libthrift-dev \
+			 libmstch-dev \
+			 libzstd-dev \
+			 libreadline-dev \
+			 libgoogle-perftools-dev \
+			 libx264-dev \
+			 libx265-dev \
+			 libde265-dev \
+			 thrift-compiler \
 			 rocksdb-tools \
+			 flex \
+			 python \
+			 gperf \
+			 zstd \
 			 bison\
 			 curl\
 			 sudo\
@@ -122,4 +141,16 @@ RUN git clone https://github.com/vipshop/hiredis-vip.git \
 	&& make && make install \
 	&& rm -rf /tmp/hiredis-vip
 
+RUN sudo ldconfig
+
 # 安装rust环境：curl -sf -L https://static.rust-lang.org/rustup.sh | sh
+
+RUN apt-get install -y \
+			libutfcpp-dev \
+			nlohmann-json-dev
+		
+# conan环境
+RUN pip install conan
+
+#Nebula安装依赖 folly\fatal\proxygen\wangle\fizz\mvfst\fbthrift
+# proxygen直接拉代码到linux可正常编译
