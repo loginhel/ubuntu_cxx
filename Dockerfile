@@ -117,6 +117,7 @@ RUN firstDeps="libasio-dev\
 			 libx264-dev \
 			 libx265-dev \
 			 libde265-dev \
+			 libfaac-dev \
 			 thrift-compiler \
 			 rocksdb-tools \
 			 flex \
@@ -128,6 +129,7 @@ RUN firstDeps="libasio-dev\
 			 sudo\
 			 lsof\
 			 nginx\
+			 netcat \
 			 unzip\
 			 lrzsz\
 			 zip\
