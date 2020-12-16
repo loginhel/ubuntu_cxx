@@ -149,7 +149,7 @@ RUN sudo ldconfig
 
 RUN apt-get install -y \
 			libutfcpp-dev \
-			nlohmann-json-dev
+			nlohmann-json3-dev
 		
 # conan环境
 RUN pip install conan
