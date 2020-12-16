@@ -149,10 +149,11 @@ RUN sudo ldconfig
 
 RUN apt-get install -y \
 			libutfcpp-dev \
-			nlohmann-json3-dev
+			nlohmann-json3-dev \
+			python3-pip
 		
 # conan环境
-RUN pip install conan
+#RUN pip3 install conan
 
 #Nebula安装依赖 folly\fatal\proxygen\wangle\fizz\mvfst\fbthrift
 # proxygen直接拉代码到linux可正常编译
