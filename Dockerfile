@@ -86,7 +86,6 @@ RUN firstDeps="libasio-dev\
 			 libcds-dev\
 			 librabbitmq-dev\
 			 librdkafka-dev\
-			 libmongoclient-dev\
 			 libhiredis-dev\
 			 libmemcached-dev\
 			 libczmq-dev\
@@ -118,6 +117,7 @@ RUN firstDeps="libasio-dev\
 			 libx265-dev \
 			 libde265-dev \
 			 libfaac-dev \
+			 libflatbuffers-dev \
 			 thrift-compiler \
 			 rocksdb-tools \
 			 flex \
@@ -157,3 +157,5 @@ RUN apt-get install -y \
 
 #Nebula安装依赖 folly\fatal\proxygen\wangle\fizz\mvfst\fbthrift
 # proxygen直接拉代码到linux可正常编译
+
+# mongodb环境
