@@ -123,6 +123,7 @@ RUN firstDeps="libasio-dev\
 			 flex \
 			 python \
 			 gperf \
+			 tcpdump \
 			 zstd \
 			 bison\
 			 curl\
