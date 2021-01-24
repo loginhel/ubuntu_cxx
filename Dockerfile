@@ -45,6 +45,7 @@ RUN	buildDeps="ninja-build\
 			   libc-ares-dev\
 			   stow\
 			   libfmt-dev\
+			   manpages-posix-dev \
 			   diffutils\
 			   valgrind" && \
     apt-get install -f -y ${buildDeps}
@@ -87,6 +88,7 @@ RUN firstDeps="libasio-dev\
 			 librabbitmq-dev\
 			 librdkafka-dev\
 			 libhiredis-dev\
+			 libmysqlcppconn-dev \
 			 libmemcached-dev\
 			 libczmq-dev\
 			 libdouble-conversion-dev \
@@ -120,6 +122,7 @@ RUN firstDeps="libasio-dev\
 			 libflatbuffers-dev \
 			 thrift-compiler \
 			 rocksdb-tools \
+			 mysql-client-core-8.0 \
 			 flex \
 			 python \
 			 gperf \
