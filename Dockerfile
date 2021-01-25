@@ -121,6 +121,7 @@ RUN firstDeps="libasio-dev\
 			 libde265-dev \
 			 libfaac-dev \
 			 libflatbuffers-dev \
+			 libgd-dev \
 			 thrift-compiler \
 			 rocksdb-tools \
 			 mysql-client-core-8.0 \
