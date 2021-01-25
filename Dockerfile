@@ -38,6 +38,7 @@ RUN	buildDeps="ninja-build\
 			   liblz4-dev\
 			   libsctp-dev\
 			   libprotobuf-dev\
+			   libcurl4-gnutls-dev \
 			   protobuf-compiler\
 			   python3\
 			   systemtap-sdt-dev\
