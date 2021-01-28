@@ -152,6 +152,10 @@ RUN git clone https://github.com/vipshop/hiredis-vip.git \
 
 RUN sudo ldconfig
 
+# 设置时区
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 # 安装rust环境：curl -sf -L https://static.rust-lang.org/rustup.sh | sh
 
 RUN apt-get install -y \
