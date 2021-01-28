@@ -130,6 +130,7 @@ RUN firstDeps="libasio-dev\
 			 python \
 			 gperf \
 			 tcpdump \
+			 iputils-ping \
 			 zstd \
 			 bison\
 			 curl\
