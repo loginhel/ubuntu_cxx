@@ -26,6 +26,8 @@ RUN	buildDeps="ninja-build\
 			   make\
 			   libtool\
 			   cmake\
+			   htop\
+			   telnet\
 			   ragel\
 			   libhwloc-dev\
 			   libnuma-dev\
@@ -52,7 +54,7 @@ RUN	buildDeps="ninja-build\
     apt-get install -f -y ${buildDeps}
 	
 	
-RUN apt-get install -y git vim openssh-server ctags bzip2 texinfo net-tools rsync pkg-config
+RUN apt-get install -y git vim openssh-server ctags bzip2 texinfo net-tools rsync pkg-config tree
 
 RUN mkdir /run/sshd
 
@@ -129,9 +131,11 @@ RUN firstDeps="libasio-dev\
 			 python \
 			 gperf \
 			 tcpdump \
+			 iputils-ping \
 			 zstd \
 			 bison\
 			 curl\
+			 tcl-dev \
 			 sudo\
 			 lsof\
 			 nginx\
@@ -150,6 +154,10 @@ RUN git clone https://github.com/vipshop/hiredis-vip.git \
 	&& rm -rf /tmp/hiredis-vip
 
 RUN sudo ldconfig
+
+# 设置时区
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # 安装rust环境：curl -sf -L https://static.rust-lang.org/rustup.sh | sh
 
