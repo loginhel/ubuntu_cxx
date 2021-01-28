@@ -26,6 +26,7 @@ RUN	buildDeps="ninja-build\
 			   make\
 			   libtool\
 			   cmake\
+			   htop\
 			   ragel\
 			   libhwloc-dev\
 			   libnuma-dev\
