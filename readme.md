@@ -17,3 +17,4 @@ service ssh restart
 
 apt list |grep ** 搜索
 ```
+
